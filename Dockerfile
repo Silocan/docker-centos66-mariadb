@@ -6,7 +6,7 @@ RUN yum repolist
 
 ENV APP_ENV development
 
-RUN yum -y install MariaDB-server
+RUN yum -y install MariaDB-server; yum clean all;
 
 COPY conf/my.cnf /etc/
 
